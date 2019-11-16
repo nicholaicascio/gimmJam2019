@@ -28,6 +28,8 @@ public class SodaPop : MonoBehaviour
                 ColaToEnable.Type = "Cola";
                 //also set the material here to be the appropriate color
                 ColaToEnable.gameObject.SetActive(true);
+                FloatMug mug = other.gameObject.GetComponent<FloatMug>();
+                mug.ingredients.Add(ColaToEnable.gameObject);
             }
         }
     }
