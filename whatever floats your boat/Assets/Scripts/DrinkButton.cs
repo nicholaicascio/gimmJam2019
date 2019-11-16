@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DrinkButton : MonoBehaviour
 {
-    public BoxCollider drinktable;
+    //public BoxCollider drinktable;
     public GameObject sodaStream;
     private bool sodaOn = false;
     // Start is called before the first frame update

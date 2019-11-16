@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class CreamTub : MonoBehaviour
 {
     public GameObject creamBall;
-    public Camera cam;
+    //public Camera cam;
     public string MyType;
+    public Transform spawnPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +28,12 @@ public class CreamTub : MonoBehaviour
 
         //ExecuteEvents.Execute(button.gameObject, pointer, ExecuteEvents.pointerEnterHandler);
 
-        var screenPos = Input.mousePosition;
-        screenPos.z = 1;
-        var worldPos = cam.ScreenToWorldPoint(screenPos);
-        GameObject newInstance = Instantiate(creamBall, worldPos, Quaternion.identity);
-        CreamBall ball = newInstance.GetComponent<CreamBall>();
-        ball.Type = MyType;
+        
+        GameObject newInstance = Instantiate(creamBall, spawnPos.position, Quaternion.identity);
+        newInstance.transform.Rotate(-90, 0, 0);
+        //newInstance.transform.localScale
+        //CreamBall ball = newInstance.GetComponent<CreamBall>();
+        //ball.Type = MyType;
     }
 
 }

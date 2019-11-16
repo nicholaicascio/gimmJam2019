@@ -32,8 +32,8 @@ public class CreamBall : MonoBehaviour
             FloatMug mug = collision.gameObject.GetComponent<FloatMug>();
             spawnPos = mug.spawnPos;
             var newBaby = Instantiate(baby, spawnPos);
-            newBaby.transform.localScale = Vector3.one;
-            mug.ingredients.Add(newBaby);
+            //newBaby.transform.localScale = Vector3.one;
+            mug.ingredients.Add(Type);
             Destroy(this.gameObject);
         }
     }
