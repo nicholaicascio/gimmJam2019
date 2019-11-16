@@ -33,7 +33,7 @@ public class CreamBall : MonoBehaviour
             spawnPos = mug.spawnPos;
             var newBaby = Instantiate(baby, spawnPos);
             //newBaby.transform.localScale = Vector3.one;
-            mug.ingredients.Add(Type);
+            mug.cream = Type;
             Destroy(this.gameObject);
         }
     }

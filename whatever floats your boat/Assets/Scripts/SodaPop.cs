@@ -32,7 +32,7 @@ public class SodaPop : MonoBehaviour
                 //also set the material here to be the appropriate color
                 ColaToEnable.gameObject.SetActive(true);
                 FloatMug mug = other.gameObject.GetComponent<FloatMug>();
-                mug.ingredients.Add(SodaType);
+                mug.liquid = SodaType;
             }
             if (SodaType == "PEPTO")
             {
@@ -44,7 +44,7 @@ public class SodaPop : MonoBehaviour
                 //also set the material here to be the appropriate color
                 ColaToEnable.gameObject.SetActive(true);
                 FloatMug mug = other.gameObject.GetComponent<FloatMug>();
-                mug.ingredients.Add(SodaType);
+                mug.liquid = SodaType;
             }
             if (SodaType == "PEE PEE")
             {
@@ -56,7 +56,7 @@ public class SodaPop : MonoBehaviour
                 //also set the material here to be the appropriate color
                 ColaToEnable.gameObject.SetActive(true);
                 FloatMug mug = other.gameObject.GetComponent<FloatMug>();
-                mug.ingredients.Add(SodaType);
+                mug.liquid = SodaType;
             }
         }
     }

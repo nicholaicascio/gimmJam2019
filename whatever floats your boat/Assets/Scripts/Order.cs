@@ -18,7 +18,7 @@ public class Order : MonoBehaviour
     private bool lose = false;
     private List<string> liquids;
     private List<string> toppings;
-    private List<string> order;
+    public List<string> order;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -46,22 +46,17 @@ public class Order : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (mug.ingredients.Contains(order[0]))
+        if (mug.liquid == order[0] && mug.cream == order[1])
         {
-            if (mug.ingredients.Contains(order[1]))
-            {
-                win = true;
-                Debug.Log("win");
-                
-                StartCoroutine(Smile());
-            }
+           win = true;
+           Debug.Log("win");
+           StartCoroutine(Smile());
         }
         else
         {
             lose = true;
             Debug.Log("lose");
             SceneManager.LoadScene("SampleScene");
-            
         }
     }
 
