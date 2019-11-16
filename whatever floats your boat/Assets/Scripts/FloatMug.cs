@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FloatMug : MonoBehaviour
 {
+    public List<GameObject> ingredients;
     // Start is called before the first frame update
     void Start()
     {
